@@ -21,10 +21,10 @@ public class AppCardDeliveryTask1Test {
     public void shouldBeSuccessfullyCompleted() {
         open("http://localhost:9999");
         $("data-test-id='city'] input").setValue("Якутск");
-        String currentDate = generateDate(5, "dd.MM.yyyy");
+        String currentDate = generateDate(4, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").sendKeys(currentDate);
-        $("[data-test-id='name'] input").setValue("Петров Олегович Степан");
+        $("[data-test-id='name'] input").setValue("Петров-Петрович Степан");
         $("[data-test-id='phone'] input").setValue("+78542679812");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
