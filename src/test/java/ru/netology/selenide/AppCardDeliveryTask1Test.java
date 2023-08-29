@@ -20,7 +20,7 @@ public class AppCardDeliveryTask1Test {
     @Test
     public void shouldBeSuccessfullyCompleted() {
         open("http://localhost:9999");
-        $("[data-test-id='city'] input").setValue("Москва");
+        $("[data-test-id='city'] input").setValue("Москва")
         String currentDate = generateDate(6, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(currentDate);
